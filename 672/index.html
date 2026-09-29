@@ -30,29 +30,31 @@ else {
 }
 </script>
 
-<style id="ps4-arabic-page-banner">
-.ps4-arabic-page-banner{
-    width:min(1100px,94%);
-    margin:18px auto 22px;
-    border:2px solid rgba(0,190,255,.65);
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:0 0 30px rgba(0,160,255,.35);
+<style id="ps4-arabic-firmware-background">
+html, body {
+    background:
+        linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,.68)),
+        url("../assets/ps4-arabic-hero.png") center top / cover fixed no-repeat !important;
+    background-color:#020812 !important;
 }
-.ps4-arabic-page-banner img{
-    display:block;
-    width:100%;
-    height:auto;
+
+body {
+    min-height:100vh !important;
+}
+
+#menu {
+    position:relative;
+    z-index:2;
+}
+
+.btn {
+    position:relative;
+    z-index:3;
 }
 </style>
 
 </head>
 <body>
-
-<div class="ps4-arabic-page-banner">
-  <img src="../assets/ps4-arabic-hero.png" alt="PS4 ARABIC HOST">
-</div>
-
 <div id="menu">
 <h1 id="msgs">PS4 6.72 FW Host v3.0 by PS4 ARABIC</h1>
 <hr>
