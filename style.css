@@ -89,3 +89,7 @@ a {
 .btn-multi:hover {
     background-color: #daa520;
 }
+.pa-g2-brand{font-family:Arial,Tahoma,sans-serif;direction:rtl;margin:18px auto 8px;padding:12px 16px;width:min(92%,900px);border:1px solid rgba(0,217,255,.35);border-radius:16px;background:rgba(3,12,20,.72);box-shadow:0 0 25px rgba(0,160,255,.12);backdrop-filter:blur(6px)}
+.pa-g2-brand .logo{font-size:clamp(28px,5vw,46px);font-weight:900;color:#fff;text-shadow:0 0 18px rgba(0,217,255,.45)}
+.pa-g2-brand .logo span{color:#00d9ff}
+.pa-g2-brand .credit{margin-top:6px;font-size:14px;color:#b8d8e8}.pa-g2-brand a{color:#00d9ff;text-decoration:none;font-weight:800}
