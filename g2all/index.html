@@ -1,109 +1,384 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-<title>PS4 ARABIC - محمد السوري | @PS4SY | PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by PS4 ARABIC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PS4 ARABIC HOST - محمد السوري | @PS4SY</title>
+
 <link rel="stylesheet" href="../style.css">
+
+<style>
+body {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.pa-g2-brand {
+    margin: 18px auto;
+    padding: 12px;
+    max-width: 900px;
+    border-radius: 12px;
+    background: rgba(0, 20, 40, 0.75);
+    border: 1px solid #008cff;
+    box-shadow: 0 0 20px rgba(0, 140, 255, 0.25);
+}
+
+.pa-g2-brand .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.pa-g2-brand .logo span {
+    color: #00aaff;
+}
+
+.pa-g2-brand .credit {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.pa-g2-brand .credit strong {
+    color: #00d9ff;
+}
+
+.pa-g2-brand a {
+    color: #ff3030;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pa-g2-brand a:hover {
+    text-decoration: underline;
+}
+
+.pa-owner-credit {
+    direction: rtl;
+    text-align: center;
+    margin: 43px auto 20px;
+    padding: 14px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.pa-owner-credit .name {
+    color: #00d9ff;
+}
+
+.pa-owner-credit a {
+    color: #ff3030;
+    text-decoration: none;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.pa-owner-credit a:hover {
+    text-decoration: underline;
+}
+
+#pa-footer {
+    direction: rtl;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 35px auto 12px;
+    padding: 12px;
+    color: #8eabb9;
+    font-size: 13px;
+}
+
+#pa-footer a {
+    color: #00d9ff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#pa-footer a:hover {
+    text-decoration: underline;
+}
+</style>
+
 </head>
+
 <body>
-<div class="pa-g2-brand"><div class="logo">PS4 <span>ARABIC</span> HOST</div><div class="credit">تطوير وبرمجة: <strong>محمد السوري</strong> &nbsp;|&nbsp; <a href="https://www.youtube.com/@PS4SY" target="_blank" rel="noopener">@PS4SY</a></div></div>
+
+<div class="pa-g2-brand">
+
+    <div class="logo">
+        PS4 <span>ARABIC</span> HOST
+    </div>
+
+    <div class="credit">
+        تطوير وبرمجة:
+        <strong>محمد السوري</strong>
+        &nbsp;|&nbsp;
+        <a href="https://www.youtube.com/@PS4SY"
+           target="_blank"
+           rel="noopener">
+           @PS4SY
+        </a>
+    </div>
+
+</div>
+
+
 <script>
+
 var uaFull = navigator.userAgent;
+
 var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
+
 var isPS4 = match !== null;
+
 var fwVersion = isPS4 ? match[1] : "Unknown";
+
 var fwNum = parseFloat(fwVersion);
 
+
 function onScriptError() {
-    msgs.innerHTML = "Content not Found! - Clear Browser Data and Re-Install Cache ...";
+
+    msgs.innerHTML =
+        "Content not Found! - Clear Browser Data and Re-Install Cache ...";
+
 }
+
 
 if (!isPS4) {
-    document.addEventListener("DOMContentLoaded", () => {
-        msgs.innerHTML = "Only for PS4 with Firmware 5.05 and 7.00 to 13.52";
-    });
-} else {
-    if (window.applicationCache.status == '0') {
-        if (fwNum == 5.05 || fwNum == 5.07) {
-            window.location.replace("cache505.html");
-        } else if (fwNum >= 7.00 && fwNum <= 8.52) {
-            window.location.replace("cache700.html");
-        } else if (fwNum >= 9.00 && fwNum <= 9.60) {
-            window.location.replace("cache900.html");
-        } else if (fwNum >= 10.00 && fwNum <= 11.02) {
-            window.location.replace("cachecss.html");
-        } else if (fwNum >= 11.50 && fwNum <= 13.52) {
-            window.location.replace("cacheslopkit.html");
-        } else {
-            document.addEventListener("DOMContentLoaded", () => {
-                msgs.innerHTML = 'Unsupported Firmware: <span style="color: red;">' + fwVersion + '</span>';
-            });
-        }
-    } else {
-        if (fwNum == 5.05 || fwNum == 5.07) {
-            var script = document.createElement('script');
-            script.src = "505/exploit.js";
-            script.onerror = onScriptError;
-            document.head.appendChild(script);
-        }
-        else if (fwNum >= 7.00 && fwNum <= 8.52) {
-            var script = document.createElement('script');
-            script.type = 'module';
-            script.src = "700/alert.js";
-            script.onerror = onScriptError;
-            document.head.appendChild(script);
-        }
-        else if (fwNum >= 9.00 && fwNum <= 9.60) {
-            var script = document.createElement('script');
-            script.type = 'module';
-            script.src = "900/alert.js";
-            script.onerror = onScriptError;
-            document.head.appendChild(script);
-        }
-        else if (fwNum >= 10.00 && fwNum <= 11.02) {
-            var script = document.createElement('script');
-            script.src = "css/main.js";
-            script.onerror = onScriptError;
-            script.onload = function () {
-                setTimeout(function () {
-                    doJb();
-                }, 500);
-            };
-            document.head.appendChild(script);
-        }
-        else if (fwNum >= 11.50 && fwNum <= 12.02) {
-            var script = document.createElement('script');
-            script.type = 'module';
-            script.src = "slopkit/chain_lapse.js";
-            script.onerror = onScriptError;
-            document.head.appendChild(script);
-        }
-        else if (fwNum >= 12.50 && fwNum <= 13.00) {
-            var script = document.createElement('script');
-            script.type = 'module';
-            script.src = "slopkit/chain_poops.js";
-            script.onerror = onScriptError;
-            document.head.appendChild(script);
-        }
-        else if (fwNum >= 13.02 && fwNum <= 13.52) {
-            var script = document.createElement('script');
-            script.type = 'module';
-            script.src = "slopkit/jb.js?v=10";
-            script.onerror = onScriptError;
-            document.head.appendChild(script);
-        }
-    }
-}
-</script>
-<h1>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by PS4 ARABIC</h1>
-<hr>
-<br>
-<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
-<h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a>ChendoChap<a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre_</a>SiSTR0 Abc</h1>
 
-<style id="ps4-arabic-footer">
-#pa-footer{direction:rtl;text-align:center;font-family:Arial,sans-serif;margin:35px auto 12px;padding:12px;color:#8eabb9;font-size:13px}
-#pa-footer a{color:#00d9ff;text-decoration:none;font-weight:700}
-</style>
-<div id="pa-footer">PS4 ARABIC HOST • محمد السوري • <a href="https://www.youtube.com/@PS4SY" target="_blank" rel="noopener">@PS4SY</a></div>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        msgs.innerHTML =
+            "Only for PS4 with Firmware 5.05 and 7.00 to 13.52";
+
+    });
+
+} else {
+
+    if (window.applicationCache.status == '0') {
+
+        if (fwNum == 5.05 || fwNum == 5.07) {
+
+            window.location.replace("cache505.html");
+
+        }
+
+        else if (fwNum >= 7.00 && fwNum <= 8.52) {
+
+            window.location.replace("cache700.html");
+
+        }
+
+        else if (fwNum >= 9.00 && fwNum <= 9.60) {
+
+            window.location.replace("cache900.html");
+
+        }
+
+        else if (fwNum >= 10.00 && fwNum <= 11.02) {
+
+            window.location.replace("cachecss.html");
+
+        }
+
+        else if (fwNum >= 11.50 && fwNum <= 13.52) {
+
+            window.location.replace("cacheslopkit.html");
+
+        }
+
+        else {
+
+            document.addEventListener("DOMContentLoaded", () => {
+
+                msgs.innerHTML =
+                    'Unsupported Firmware: <span style="color: red;">'
+                    + fwVersion +
+                    '</span>';
+
+            });
+
+        }
+
+    }
+
+    else {
+
+        if (fwNum == 5.05 || fwNum == 5.07) {
+
+            var script = document.createElement('script');
+
+            script.src = "505/exploit.js";
+
+            script.onerror = onScriptError;
+
+            document.head.appendChild(script);
+
+        }
+
+        else if (fwNum >= 7.00 && fwNum <= 8.52) {
+
+            var script = document.createElement('script');
+
+            script.type = 'module';
+
+            script.src = "700/alert.js";
+
+            script.onerror = onScriptError;
+
+            document.head.appendChild(script);
+
+        }
+
+        else if (fwNum >= 9.00 && fwNum <= 9.60) {
+
+            var script = document.createElement('script');
+
+            script.type = 'module';
+
+            script.src = "900/alert.js";
+
+            script.onerror = onScriptError;
+
+            document.head.appendChild(script);
+
+        }
+
+        else if (fwNum >= 10.00 && fwNum <= 11.02) {
+
+            var script = document.createElement('script');
+
+            script.src = "css/main.js";
+
+            script.onerror = onScriptError;
+
+            script.onload = function () {
+
+                setTimeout(function () {
+
+                    doJb();
+
+                }, 500);
+
+            };
+
+            document.head.appendChild(script);
+
+        }
+
+        else if (fwNum >= 11.50 && fwNum <= 12.02) {
+
+            var script = document.createElement('script');
+
+            script.type = 'module';
+
+            script.src = "slopkit/chain_lapse.js";
+
+            script.onerror = onScriptError;
+
+            document.head.appendChild(script);
+
+        }
+
+        else if (fwNum >= 12.50 && fwNum <= 13.00) {
+
+            var script = document.createElement('script');
+
+            script.type = 'module';
+
+            script.src = "slopkit/chain_poops.js";
+
+            script.onerror = onScriptError;
+
+            document.head.appendChild(script);
+
+        }
+
+        else if (fwNum >= 13.02 && fwNum <= 13.52) {
+
+            var script = document.createElement('script');
+
+            script.type = 'module';
+
+            script.src = "slopkit/jb.js?v=10";
+
+            script.onerror = onScriptError;
+
+            document.head.appendChild(script);
+
+        }
+
+    }
+
+}
+
+</script>
+
+
+<h1>
+PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by PS4 ARABIC
+</h1>
+
+<hr>
+
+<br>
+
+
+<h1
+id="msgs"
+style="
+font-size:30px;
+margin-top:77px;
+margin-bottom:455px;
+">
+
+Loading GoldHEN v2.4b18.12... Please Wait
+
+</h1>
+
+
+<div class="pa-owner-credit">
+
+    تطوير وبرمجة:
+
+    <span class="name">
+        محمد السوري
+    </span>
+
+    |
+
+    <a
+    href="https://www.youtube.com/@PS4SY"
+    target="_blank"
+    rel="noopener">
+
+        قناة @PS4SY
+
+    </a>
+
+</div>
+
+
+<div id="pa-footer">
+
+    PS4 ARABIC HOST
+    •
+    محمد السوري
+    •
+    <a
+    href="https://www.youtube.com/@PS4SY"
+    target="_blank"
+    rel="noopener">
+
+        @PS4SY
+
+    </a>
+
+</div>
+
+
 </body>
 </html>
