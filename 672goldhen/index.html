@@ -4,8 +4,30 @@
 <title>PS4 ARABIC - محمد السوري | @PS4SY | PS4 6.72 FW GoldHEN Host by PS4 ARABIC</title>
 <link rel="stylesheet" href="../style.css">
 <script src="jb.js"></script>
+
+<style id="ps4-arabic-page-banner">
+.ps4-arabic-page-banner{
+    width:min(1100px,94%);
+    margin:18px auto 22px;
+    border:2px solid rgba(0,190,255,.65);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(0,160,255,.35);
+}
+.ps4-arabic-page-banner img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+</style>
+
 </head>
 <body onload="if(localStorage.cached672=='yes')setTimeout(load_goldhen, 50);">
+
+<div class="ps4-arabic-page-banner">
+  <img src="../assets/ps4-arabic-hero.png" alt="PS4 ARABIC HOST">
+</div>
+
 <script>
 window.applicationCache.onprogress=function(a){document.getElementById("msgs").innerHTML="Installing Offline Cache: "+(Math.round(100*(a.loaded/a.total)))+"%"};
 window.applicationCache.oncached=function(){setTimeout(function(){document.getElementById("msgs").innerHTML="Cache Installed Successfully ✔";},1500);setTimeout(function(){document.getElementById("msgs").innerHTML="Now Close And Re-Open Your Browser ..."; },3500);localStorage.cached672="yes";};

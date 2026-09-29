@@ -63,6 +63,47 @@ html,body{margin:0;padding:0;background:#02070d;color:#eef7ff;font-family:Arial,
 }
 </style>
 
+
+<style id="ps4-arabic-card-design">
+#menu .btn:not(.btn-onln){
+    width:260px !important;
+    min-height:120px !important;
+    margin:10px !important;
+    padding:22px 12px !important;
+    border:2px solid rgba(0,190,255,.75) !important;
+    border-radius:20px !important;
+    background:
+      linear-gradient(rgba(2,8,18,.28),rgba(2,8,18,.70)),
+      url("assets/ps4-arabic-hero.png") center/cover no-repeat !important;
+    color:#fff !important;
+    font-size:18px !important;
+    font-weight:900 !important;
+    text-shadow:0 2px 8px #000,0 0 12px #000 !important;
+    box-shadow:0 0 22px rgba(0,170,255,.35),
+               inset 0 0 25px rgba(0,0,0,.35) !important;
+    cursor:pointer;
+    transition:.25s ease !important;
+}
+
+#menu .btn:not(.btn-onln):hover{
+    transform:translateY(-5px) scale(1.02);
+    border-color:#00eaff !important;
+    box-shadow:0 0 35px rgba(0,210,255,.65),
+               inset 0 0 25px rgba(0,0,0,.25) !important;
+}
+
+#menu{
+    text-align:center;
+}
+
+@media(max-width:600px){
+    #menu .btn:not(.btn-onln){
+        width:92% !important;
+        min-height:115px !important;
+    }
+}
+</style>
+
 </head>
 <body>
 <div class="pa-wrap">
