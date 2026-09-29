@@ -1,0 +1,6 @@
+PS4 ARABIC HOST
+Developer: محمد السوري
+Channel: @PS4SY
+
+This project is a modified host based on the supplied project files.
+Original third-party files and their respective licenses/attributions remain subject to their original terms.
